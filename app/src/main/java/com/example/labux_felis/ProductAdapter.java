@@ -1,4 +1,7 @@
 package com.example.labux_felis;
+
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +34,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.productType.setText(product.getType());
         holder.productImage.setImageResource(product.getImageResId());
         holder.seeDetailsButton.setOnClickListener(v -> {
-            // Handle button click
+            Context context = v.getContext();
+            Intent intent = new Intent(context, ProductDetailActivity.class);
+            intent.putExtra("productTitle", product.getTitle());
+            intent.putExtra("productDescription", product.getDescription());
+            intent.putExtra("productImage", product.getImageResId());
+            context.startActivity(intent);
         });
     }
 

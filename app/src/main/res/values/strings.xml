@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">LAB UX-felis</string>
+    <string-array name="payment_methods">
+        <item>-- Select Payment Method --</item>
+        <item>Visa</item>
+        <item>MasterCard</item>
+        <item>Credit Card</item>
+    </string-array>
 </resources>

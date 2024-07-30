@@ -1,5 +1,6 @@
 package com.example.labux_felis;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,11 +26,11 @@ public class ProductListActivity extends AppCompatActivity {
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
             productList = new ArrayList<>();
-            productList.add(new Product("Title 1", "Game Assets: Knight Character", R.drawable.detail1));
-            productList.add(new Product("Title 2", "Game Assets: 3D Arena", R.drawable.detail2));
-            productList.add(new Product("Title 3", "Game Assets: Music", R.drawable.detail3));
-            productList.add(new Product("Title 4", "Game Assets: GUI", R.drawable.detail4));
-            productList.add(new Product("Title 5", "Game Assets: GUI", R.drawable.detail5));
+            productList.add(new Product("Music Asset", "Game Assets: Music", R.drawable.detail1, "Description of object"));
+            productList.add(new Product("2D Character", "Game Assets: Knight Character", R.drawable.detail2, "Description of object"));
+            productList.add(new Product("Font Asset", "Game Assets: Font", R.drawable.detail3, "Description of object"));
+            productList.add(new Product("3D Image", "Game Assets: 3D Arena", R.drawable.detail4, "Description of object"));
+            productList.add(new Product("GUI Asset", "Game Assets: GUI", R.drawable.detail5, "Description of object"));
 
             productAdapter = new ProductAdapter(productList);
             recyclerView.setAdapter(productAdapter);
