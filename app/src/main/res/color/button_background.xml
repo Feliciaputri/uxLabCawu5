@@ -1,0 +1,5 @@
+<!-- res/color/button_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:color="#4668b3"/> <!-- Darker color on press -->
+    <item android:color="#5883e0"/> <!-- Normal color -->
+</selector>

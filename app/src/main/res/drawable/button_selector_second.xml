@@ -1,0 +1,10 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#5883e0"/>
+        </shape>
+    </item>
+    <item>
+        <bitmap android:src="@drawable/button_background_second" />
+    </item>
+</selector>
