@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/login_background">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="312dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/gamelogo" />
+
+    <TextView
+        android:id="@+id/usernameLabel"
+        android:layout_below="@id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:text="Username"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/usernamefield"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/usernameLabel"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/textfield_background"
+        android:padding="10dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_below="@id/usernamefield"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:text="Password"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/passwordfield"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/passwordLabel"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/textfield_background"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:inputType="textPassword"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginBtn"
+        android:layout_marginTop="60dp"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_background"
+        android:layout_below="@id/passwordfield"
+        android:layout_centerHorizontal="true"
+        android:text="Login"
+        android:textColor="#FFBB86FC"
+        android:theme="@style/CustomButtonTheme"/>
+
+
+</RelativeLayout>
