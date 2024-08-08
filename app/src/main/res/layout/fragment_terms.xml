@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.TermsFragment"
+    android:background="@drawable/tab_content">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:padding="16dp"
+        android:text="Terms of Service for AXForAsset\n\n1. Acceptance of Terms\nBy accessing or using AXForAsset, users agree to be bound by these terms. This sets the foundation for user agreement and compliance.\n\n2. User Accounts\nUsers must create an account to access and use AXForAsset. They agree to provide accurate information during registration and are responsible for maintaining the security of their accounts and passwords.\n\n3. Marketplace Usage\nUsers can list game assets for sale and purchase assets listed by others. This outlines the core functionality of AXForAsset as a marketplace." />
+
+</ScrollView>
