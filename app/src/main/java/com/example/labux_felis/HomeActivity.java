@@ -3,17 +3,18 @@ package com.example.labux_felis;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.appcompat.widget.PopupMenu;
+
+
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
-import androidx.annotation.NonNull;
-import androidx.viewpager2.widget.ViewPager2;
-import com.google.android.material.tabs.TabLayout;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -99,6 +100,45 @@ public class HomeActivity extends AppCompatActivity {
                 handler.postDelayed(this, 2000); // Schedule the runnable again after 2 seconds
             }
         };
+
+        ImageView menuImageView = findViewById(R.id.menu_image);
+        menuImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showPopupMenu(view);
+            }
+        });
+
+    }
+
+    private void showPopupMenu(View view) {
+        PopupMenu popupMenu = new PopupMenu(this, view);
+        MenuInflater inflater = popupMenu.getMenuInflater();
+        inflater.inflate(R.menu.drawer_menu, popupMenu.getMenu());
+
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.item1:
+
+                        return true;
+                    case R.id.item2:
+
+                        return true;
+                    case R.id.item3:
+
+                        return true;
+                    case R.id.item4:
+
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        });
+
+        popupMenu.show();
     }
 
     @Override
@@ -113,5 +153,10 @@ public class HomeActivity extends AppCompatActivity {
         handler.removeCallbacks(slideRunnable); // Stop the runnable when the activity pauses
     }
 
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.drawer_menu,menu);
+        return true;
+    }
 }

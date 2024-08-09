@@ -13,8 +13,4 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="CustomButtonTheme" parent="ThemeOverlay.MaterialComponents">
-        <!-- Add any specific styling you need for your button here -->
-    </style>
-
 </resources>
