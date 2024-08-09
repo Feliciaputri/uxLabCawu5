@@ -17,9 +17,12 @@ import android.app.AlertDialog;
 public class ProductDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item_product_detail);
-
+        ImageView backButton = findViewById(R.id.backButton);
         ImageView imageView = findViewById(R.id.productImage);
         TextView productTitle = findViewById(R.id.productTitle);
         TextView productDescription = findViewById(R.id.productDescription);
@@ -40,7 +43,14 @@ public class ProductDetailActivity extends AppCompatActivity {
                 R.array.payment_methods, R.layout.custom_spinner_item);
         adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         paymentMethodSpinner.setAdapter(adapter);
-
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProductDetailActivity.this, ProductListActivity.class);
+                startActivity(intent);
+                finish(); // Optional: Close the current activity
+            }
+        });
         orderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
