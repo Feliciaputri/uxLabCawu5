@@ -7,10 +7,22 @@
     android:background="@drawable/baground"
     tools:context=".ProductListActivity">
 
+    <!-- Header TextView -->
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Assets List"
+        android:textSize="30dp"
+
+        android:textColor="@android:color/white"
+        android:gravity="left"
+        android:padding="10dp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="2dp" />
 
-    </LinearLayout>
+</LinearLayout>
