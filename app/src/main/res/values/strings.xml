@@ -9,4 +9,12 @@
     <string name="profile_image_desc">Description for the image</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <style name="CustomPopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/popup_menu</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:titleTextColor">#FFFFFF</item>
+<!--        <item name="android:titleTextAppearance">#FFFFFF</item>-->
+        <item name="android:itemTextAppearance">@color/white</item>
+    </style>
+
 </resources>

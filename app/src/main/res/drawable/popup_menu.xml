@@ -1,0 +1,22 @@
+<!-- res/drawable/tab_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp"/>
+            <gradient
+                android:startColor="#FF5883e0"
+                android:endColor="#FFEEFA"
+                android:angle="270"/>
+        </shape>
+    </item>
+
+    <item android:left="6dp" android:right="6dp" android:top="6dp" android:bottom="6dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp"/>
+            <gradient
+                android:startColor="#8bb4e3"
+                android:endColor="#eef4fb"
+                android:angle="270"/>
+        </shape>
+    </item>
+</layer-list>

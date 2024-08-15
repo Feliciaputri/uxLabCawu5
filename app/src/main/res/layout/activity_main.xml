@@ -27,14 +27,28 @@
     <EditText
         android:id="@+id/usernamefield"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_below="@id/usernameLabel"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/textfield_background"
         android:padding="10dp"
-        android:textColor="@color/white"/>
+        android:hint="Input username"
+        android:textColorHint="#FF658cbb"
+        android:textColor="@color/white"
+        android:textAppearance="@style/HintTextAppearance" />
+
+    <TextView
+        android:id="@+id/usernameError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernamefield"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="12sp"
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/passwordLabel"
@@ -50,15 +64,29 @@
     <EditText
         android:id="@+id/passwordfield"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_below="@id/passwordLabel"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/textfield_background"
         android:padding="10dp"
+        android:inputType="textPassword"
+        android:hint="Input password"
+        android:textColorHint="#FF658cbb"
         android:textColor="@color/white"
-        android:inputType="textPassword"/>
+        android:textAppearance="@style/HintTextAppearance" />
+
+    <TextView
+        android:id="@+id/passwordError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordfield"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="12sp"
+        android:visibility="gone"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/loginBtn"
@@ -71,6 +99,4 @@
         android:text="Login"
         android:textColor="#FFBB86FC"
         android:theme="@style/CustomButtonTheme"/>
-
-
 </RelativeLayout>

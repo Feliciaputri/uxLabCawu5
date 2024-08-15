@@ -7,17 +7,34 @@
     android:background="@drawable/baground"
     tools:context=".ProductListActivity">
 
-    <!-- Header TextView -->
-    <TextView
-        android:id="@+id/headerTextView"
+    <LinearLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Assets List"
-        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="10dp">
 
-        android:textColor="@android:color/white"
-        android:gravity="left"
-        android:padding="10dp" />
+        <TextView
+            android:id="@+id/headerTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Assets List"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:gravity="left" />
+
+        <ImageView
+            android:id="@+id/menu_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu"/>
+
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
