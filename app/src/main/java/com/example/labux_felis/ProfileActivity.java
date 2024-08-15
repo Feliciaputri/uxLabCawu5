@@ -16,7 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
 
 public class ProfileActivity extends AppCompatActivity {
-    private TextView HiTextView;
+    private TextView hiTextView;
+    private TextView emailTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +27,20 @@ public class ProfileActivity extends AppCompatActivity {
         }
         setContentView(R.layout.profile);
 
-        HiTextView = findViewById(R.id.hiUsernameText);
+        hiTextView = findViewById(R.id.hiUsernameText);
+        emailTextView = findViewById(R.id.profile_email);
 
-        // Get username from intent
+        // Get the username from the intent or from the global state
         String username = GlobalState.getInstance().getUsername();
 
         if (username != null) {
-            HiTextView.setText("Welcome, " + username);
+            hiTextView.setText("Welcome, " + username);
+
+            // Construct the email address and set it to the emailTextView
+            String email = username + "@gmail.com";
+            emailTextView.setText(email);
         }
+
         ImageView menuImageView = findViewById(R.id.menu_image); // Assuming you have a menu button
         menuImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +62,6 @@ public class ProfileActivity extends AppCompatActivity {
         MenuInflater inflater = popupMenu.getMenuInflater();
         inflater.inflate(R.menu.drawer_menu_profile, popupMenu.getMenu());
 
-        // Apply icon color filter
         for (int i = 0; i < popupMenu.getMenu().size(); i++) {
             MenuItem item = popupMenu.getMenu().getItem(i);
             Drawable icon = item.getIcon();
@@ -74,6 +80,9 @@ public class ProfileActivity extends AppCompatActivity {
                         return true;
                     case R.id.item2:
                         activity.startActivity(new Intent(context, ProductListActivity.class));
+                        return true;
+                    case R.id.item3:
+                        activity.startActivity(new Intent(context, ProfileActivity.class));
                         return true;
                     case R.id.item4:
                         activity.startActivity(new Intent(context, MainActivity.class));

@@ -19,7 +19,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
     public ImageAdapter(Context context, ArrayList<Integer> arrayList) {
         this.context = context;
         this.arrayList = new ArrayList<>(arrayList);
-        // Duplicate first and last items for seamless looping
+
         this.arrayList.add(0, arrayList.get(arrayList.size() - 1));
         this.arrayList.add(arrayList.get(0));
     }

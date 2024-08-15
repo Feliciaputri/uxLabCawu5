@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Title -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
             android:text="Conditions of Service for AXForAsset"
             android:paddingBottom="8dp" />
 
-        <!-- Section 1: User Registration and Authentication -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             android:text="1. User Registration and Authentication\n\n- Users must create an account and provide accurate information to access AXForAsset.\n\n- Authentication mechanisms (e.g., email verification, two-factor authentication) may be required to secure user accounts."
             android:paddingBottom="8dp" />
 
-        <!-- Section 2: User Responsibilities -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             android:text="2. User Responsibilities\n\n- Users are responsible for maintaining the confidentiality of their account credentials.\n\n- Users agree to provide accurate and truthful information when registering and using AXForAsset."
             android:paddingBottom="8dp" />
 
-        <!-- Section 3: Platform Usage -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
             android:text="3. Platform Usage\n\n- AXForAsset provides a platform for users to buy and sell game assets.\n\n- Users must comply with all applicable laws and regulations when using AXForAsset."
             android:paddingBottom="8dp" />
 
-        <!-- Section 4: Listing and Purchasing Assets -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
             android:text="4. Listing and Purchasing Assets\n\n- Sellers must accurately describe assets listed for sale on AXForAsset.\n\n- Buyers agree to review asset details and conditions before making a purchase."
             android:paddingBottom="8dp" />
 
-        <!-- Section 5: Termination -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

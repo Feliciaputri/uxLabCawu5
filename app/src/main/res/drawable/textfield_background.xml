@@ -13,7 +13,7 @@
 
     <stroke
         android:width="2dp"
-        android:color="#5883e0"/> <!-- Border color and width -->
+        android:color="#5883e0"/>
 
     <corners android:radius="4dp"/>
 </shape>

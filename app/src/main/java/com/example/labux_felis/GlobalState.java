@@ -4,7 +4,7 @@ public class GlobalState {
     private String username;
 
     private GlobalState() {
-        // Private constructor to prevent instantiation
+
     }
 
     public static synchronized GlobalState getInstance() {

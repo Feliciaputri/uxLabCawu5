@@ -84,7 +84,19 @@
         android:padding="12dp"
         android:background="@drawable/edittext_background" />
 
-    <Button
+<!--    <Button-->
+<!--        android:id="@+id/orderButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/paymentMethodSpinner"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="Submit"-->
+<!--        android:backgroundTint="@color/button_background"-->
+<!--        android:textColor="@color/button_text_color"-->
+<!--        />-->
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/orderButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -92,7 +104,6 @@
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:text="Submit"
-        android:backgroundTint="@color/button_background"
-        android:textColor="@color/button_text_color"
-        />
+        android:background="@drawable/button_background"
+        android:textColor="@drawable/btn_text_selector"/>
 </RelativeLayout>

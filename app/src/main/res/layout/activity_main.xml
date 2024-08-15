@@ -97,6 +97,6 @@
         android:layout_below="@id/passwordfield"
         android:layout_centerHorizontal="true"
         android:text="Login"
-        android:textColor="#FFBB86FC"
+        android:textColor="@drawable/btn_text_selector"
         android:theme="@style/CustomButtonTheme"/>
 </RelativeLayout>

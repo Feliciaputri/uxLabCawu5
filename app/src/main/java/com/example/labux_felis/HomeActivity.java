@@ -189,6 +189,6 @@ public class HomeActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         handler.removeCallbacks(slideRunnable);
-        // Cleanup any resources related to the PopupMenu or other UI elements if needed
+
     }
 }

@@ -64,10 +64,10 @@ public class MainActivity extends AppCompatActivity {
         if (isValid) {
             username = usernameInput;
 
-            // Store the username in the global state
+
             GlobalState.getInstance().setUsername(username);
 
-            // Redirect to HomeActivity
+
             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
             intent.putExtra("USERNAME", username);
             startActivity(intent);
